@@ -12,9 +12,9 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class PrimaryTransaction {
+public class Transaction {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Date date;
     private String description;
@@ -24,7 +24,7 @@ public class PrimaryTransaction {
     private BigDecimal availableBalance;
 
     @ManyToOne
-    @JoinColumn(name = "primary_account_id")
-    private PrimaryAccount primaryAccount;
+    @JoinColumn(name = "account_id")
+    private Account account;
 
 }

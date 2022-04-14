@@ -10,7 +10,7 @@ import java.util.Date;
 public class Appointment {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Date date;
     private String location;
