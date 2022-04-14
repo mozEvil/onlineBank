@@ -9,7 +9,7 @@
             <h2 class="title">My Profile</h2>
             <hr/>
             <form method="post" th:action="@{/user/profile}">
-                <input type="hidden" name="id" th:value="${user.userId}"/>
+                <input type="hidden" name="id" th:value="${user.id}"/>
 
                 <div class="form-group">
                     <label for="firstName">First Name</label>
@@ -66,7 +66,7 @@
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
                             <input type="text" class="form-control" th:value="${user.username}" id="username"
-                                   name="username" roleId="username" placeholder="Enter your Username"
+                                   name="username" placeholder="Enter your Username"
                                    required="required"/>
                         </div>
                     </div>
@@ -92,8 +92,8 @@
                     </tr>
 
                     <tr>
-                        <td data-th-text="${user.primaryAccount.accountNumber}">...</td>
-                        <td data-th-text="${user.savingsAccount.accountNumber}">...</td>
+                        <td data-th-text="${primaryAccountNumber}">...</td>
+                        <td data-th-text="${savingsAccountNumber}">...</td>
                     </tr>
                 </table>
             </div>

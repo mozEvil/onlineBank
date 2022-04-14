@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head th:replace="common/header :: common-header"/>
-<body roleId="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 <head th:replace="common/header :: navbar"/>
 <div class="container main">
     <div class="row">
@@ -12,7 +12,7 @@
 
                 <div class="form-group">
                     <label for="dateString">Pick a Date and Time:</label>
-                    <div class="input-append date form_datetime input-group" data-date="2016-10-21T15:25:00Z">
+                    <div class="input-append date form_datetime input-group" data-date="2022-04-14T15:25:00Z">
                         <input class="form-control" type="text" value="" readonly="readonly"
                                th:value="${dateString}" name="dateString"
                                id="dateString" required="required"/>
@@ -26,10 +26,21 @@
                     <select class="form-control" th:value="${appointment.location}" name="location" id="location"
                             >
                         <option disabled="disabled" selected="selected" > -- select the location --</option>
-                        <option>Boston</option>
-                        <option>New York</option>
-                        <option>Chicago</option>
-                        <option>San Francisco</option>
+                        <option>Москва</option>
+                        <option>Санкт-Петербург</option>
+                        <option>Новосибирск</option>
+                        <option>Екатеринбург</option>
+                        <option>Казань</option>
+                        <option>Нижний Новгород</option>
+                        <option>Челябинск</option>
+                        <option>Омск</option>
+                        <option>Самара</option>
+                        <option>Ростов-на-Дону</option>
+                        <option>Уфа</option>
+                        <option>Красноярск</option>
+                        <option>Пермь</option>
+                        <option>Воронеж</option>
+                        <option>Тюмень</option>
                     </select>
                 </div>
 
